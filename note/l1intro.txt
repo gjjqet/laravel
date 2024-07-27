@@ -1,0 +1,84 @@
+1.classic php 
+2.project experience
+
+
+=>required application
+php
+composer 
+mysql 
+webserver 
+npm 
+nodejs
+
+
+
+=>Website
+https://laravel.com/ 
+
+
+
+=>Download Laravel 
+composer create-project laravel/laravel projectname     (lessonone)  10 or 11
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+=>MVC Framework (Model,View,Controller)
+
+= Model 
+it's work with database (SELECT,INSERT,UPDATE,DELETE)
+communicate with the Controller
+
+
+= View 
+A view is that part of the application that represents the presentation of data HTML CSS codes for enduser see.
+
+
+= Controller
+The controller mediates between Models and Views 
+The controller receives input form the user , process the request (GET,POST,PUT,DELETE)
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+=> Folder and File Structures 
+
+app > Models 
+database > migrations
+
+
+resources > views 
+
+
+app > Http > Controllers 
+
+
+public > (for images / custom css / custom js)
+
+
+routes > web.php (or) api.php 
+
+
+.env 
+
+---------------------------------------------------------------------------------
+
+=> Run Project 
+php artisan serve 
+
+=> Stop Project (503 error)
+php artisan down  
+
+    => Stop Project (by redirect)
+        php artisan down --redirect=/https://google.com
+
+
+=> Resume Projectlocalhost:8000
+www.dlt.com 
+php artisan up  
+
+
+
+-----------------------------------------------------------------------------------

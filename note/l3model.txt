@@ -1,0 +1,118 @@
+=>Create Table (app > Models)
+
+= Method 1 (Model / Table)
+php artisan make:model Student -m 
+or
+php artisan make:model Student --migration 
+
+
+-------------------------------------------------------------------------------------------
+
+databaese connect > create model > create migration > Mess Assignments > migrate
+
+--------------------------------------------------------------------------------------------
+
+=>Inspecting Models to Database Table 
+php artisan model:show Student
+
+---------------------------------------------------------------------------------------------
+
+
+Mess Assignments (Model > Book)
+
+php artisan make:model Book 
+
+
+protected $table = "books";
+protected $primaryKey = "id";
+
+
+
+=> Customize Timestamp 
+const CREATE_AT = "created_date";
+const CREATE_AT = "updated_date";
+
+
+
+
+=> Method 1 
+
+protected $fillable = [
+    "title",
+    "status",
+    "copyright",
+    "solidfile",
+    "created_time",
+    "updated_time"
+];
+
+
+=> Method 2 
+
+ protected $guarded = [];
+
+
+
+-----------------------------------------------------------------
+
+
+=>Retrieving Data from model (Single / Multi)
+
+=>Mylti 
+
+$books = Book::all();
+return $books;
+
+(Method 1)
+
+foreach($books as $book){
+    echo "$book->title <br/> $book->copyright <hr/>";
+}
+
+-------------------
+
+(Method 2) // Retrieving data  by matching where method 
+
+$books = Book::where("invoiceid",5)->get();
+return $books;
+
+foreach($books as $book){
+    echo "$book->title <br/> $book->copyright <hr/>";
+}
+
+
+=asc/desc 
+
+$book = Book::where("city","yangon")->orderBy("id","asc")->get();
+return $book;
+
+$book = Book::where("city","yangon")->orderBy("id","desc")->get();
+return $book;
+
+$book = Book::where("city","yangon")->orderByDesc("id")->get();
+return $book;
+
+
+-------------------
+
+=> Single
+
+(Method 1) //Retrieving data by primaryKey
+
+$book = Book::find(5);
+return $book;
+
+echo "$book->title <br/> $book->copyright <hr/>";
+
+--------
+
+
+(Method 2) //Retrieving data by primary Key with Error Mode Exception
+
+$book = Book::findOrFail(5);
+return $book;
+
+echo "$book->title <br/> $book->copyright <hr/>";
+
+
+-------------------------------------------------------------------------------
