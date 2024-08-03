@@ -15,6 +15,7 @@ databaese connect > create model > create migration > Mess Assignments > migrate
 =>Inspecting Models to Database Table 
 php artisan model:show Student
 
+
 ---------------------------------------------------------------------------------------------
 
 
@@ -58,7 +59,7 @@ protected $fillable = [
 
 =>Retrieving Data from model (Single / Multi)
 
-=>Mylti 
+=>Multi 
 
 $books = Book::all();
 return $books;
@@ -116,3 +117,4 @@ echo "$book->title <br/> $book->copyright <hr/>";
 
 
 -------------------------------------------------------------------------------
+
