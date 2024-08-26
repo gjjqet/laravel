@@ -23,7 +23,7 @@ echo $date->format("d m Y"); 02 08 2025;
 
 echo Carbon::now(); // 2024-08-02 22:05:10
 
-echo Carbon::now()->addDay(); //  2024-08-02 22:05:10
+echo Carbon::now()->addDay(); //  2024-08-03 22:05:10
 echo Carbon::now()->addDays(10); //  2024-08-12 22:05:10
 
 echo Carbon::now()->addDays(1)->diffForHumans; // 23 hours from now
@@ -46,7 +46,7 @@ echo Carbon::now()->addMonths(2); //  2024-10-31 22:05:10
 
 echo Carbon::now()->addMonths(1)->diffForHumans; // 4 weeks from now
 echo Carbon::now()->addMonths(3)->diffForHumans; // 2 months from now
-echo Carbon::now()->addMOnths(10)->diffForHumans; // 9 months from now
+echo Carbon::now()->addMonths(10)->diffForHumans; // 9 months from now
 
 
 
@@ -103,6 +103,7 @@ echo Carbon::now()->tomorrow()->diffForHumans(); // 2 hours from now
 
 
 
+
 ->everySecond();
 
 
@@ -130,3 +131,13 @@ echo Carbon::now()->tomorrow()->diffForHumans(); // 2 hours from now
 
 ->monthly(); 
 ->monthly(4,"15:00"); // Run the task every week on 4th at 3pm
+
+
+
+
+
+
+
+
+// zip file
+https://www.mediafire.com/file/x9osm0chzk9lgvw/lessonone.zip/file

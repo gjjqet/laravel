@@ -47,7 +47,7 @@ SHOW DATABASES;
 
 $table->id();               
 $table->increments("id");
-$table->biIncrements("id");
+$table->bigIncrements("id");
 
 $table->integer("id");                  $table->unsignedBigInteger()
 $table->bitInteger("id");
@@ -118,6 +118,7 @@ php artisan migrate:rollback --pretend
 
 
 
+
 =>Undo Migration by step   (rollback the last two migrations)
 php artisan migrate:rollback --step=2
 
@@ -138,6 +139,14 @@ php artisan migrate:refresh
 php artisan migrate:refresh --step=5
 
 
+students
+customers 
+
+workers 
+projects 
+products 
+
+
 --------------------------------------------------------------------------------------------------
 
 => Add New Column 
@@ -154,7 +163,7 @@ $table->dropColumn("city")
 
 
 =>Drop Column 
-php artisan make:migration remove_age_to_students_table --table=Students 
+php artisan make:migration remove_age_to_students_table --table=students 
 => up()
 $table->dropColumn("age");
 => down()
@@ -187,6 +196,7 @@ Schema::rename("customers","cu");
 
 -----------------------------------------------------------------------------------
 
+
 =>Default Value 
 
 php artisan make:migration create_books_table --create="books"
@@ -205,7 +215,6 @@ Schema::create("book",function(Blueprint $table)){
 };
 
 
-
 -------------------------------------------------------------------------------------------------
 
 Mess Assignments (Model > Book)
@@ -219,8 +228,8 @@ protected $primaryKey = "id";
 
 
 => Customize Timestamp 
-const CREATE_AT = "created_date";
-const CREATE_AT = "updated_date";
+const CREATED_AT = "created_date";
+const CREATED_AT = "updated_date";
 
 
 
@@ -283,4 +292,3 @@ public function down():void
 
 
 ---------------------------------------------------------------------
-
